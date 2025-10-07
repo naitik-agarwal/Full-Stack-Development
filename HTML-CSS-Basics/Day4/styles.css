@@ -1,0 +1,40 @@
+/* h2 {
+  color: red;
+} */
+
+/* Thats how we define css for a specific class of elements */
+.red_text {
+  color: red;
+}
+.yellow_text {
+  color: yellow;
+}
+.green_text {
+  color: green;
+}
+
+/* Thats how we style using id */
+#color_blue {
+  color: blue;
+}
+#color_orange {
+  color: orange;
+}
+#color_purple {
+  color: purple;
+}
+
+/* Thats how we style using attribute */
+p[draggable] {
+  /* Only the para elements which has draggable attribute true would be styles with this style*/
+  color: red;
+}
+/* Going more specific */
+p[draggable="false"] {
+  color: aqua;
+}
+
+/* Select all */
+* {
+  background-color: aquamarine;
+}
