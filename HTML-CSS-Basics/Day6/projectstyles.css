@@ -1,0 +1,35 @@
+body {
+  background-color: black;
+  margin: 0;
+  text-align: center;
+}
+#header {
+  margin: 0 0 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: white;
+  font-family: "Libre Baskerville", serif;
+  text-transform: uppercase;
+}
+#para {
+  color: white;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+}
+#image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 5px solid white;
+  margin: 0 auto 30px;
+  background-color: white;
+}
+#box {
+  width: 50%;
+  max-width: 900px;
+  min-width: 320px;
+  margin: 90px auto 60px;
+  padding: 0 12px;
+}
