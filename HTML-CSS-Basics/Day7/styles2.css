@@ -1,0 +1,97 @@
+/* 
+  The universal selector (*) targets ALL elements on the page.
+  'box-sizing: border-box' changes how width and height are calculated.
+  Normally, total width = content + padding + border.
+  With border-box, total width INCLUDES padding and border.
+  → This makes layout calculations simpler and prevents elements from accidentally overflowing.
+*/
+* {
+  box-sizing: border-box;
+}
+
+/* 
+  BODY — this is the main background and text styling for the entire page.
+*/
+body {
+  background-color: #333; /* Sets the entire page background to dark gray (hex #333). */
+  font-family: sans-serif; /* Uses a clean sans-serif font (like Arial or Helvetica). */
+  color: white; /* Default text color = white. */
+  margin: 0; /* Removes the default browser margin (usually ~8px). */
+  padding: 2rem; /* Adds spacing INSIDE the page so content isn’t touching screen edges (2 × root font size ≈ 32px). */
+}
+
+/*
+  The .poster-container is a wrapper that holds all the movie posters.
+*/
+.poster-container {
+  max-width: 1200px; /* Limits container width so content doesn’t stretch too wide on large screens. */
+  margin: 0 auto; /* 
+                         Centers the container horizontally. 
+                         ‘auto’ tells browser to distribute leftover horizontal space evenly on both sides.
+                         Works only if width or max-width is set.
+                      */
+  text-align: center; /* Centers inline or inline-block elements horizontally inside the container. */
+}
+
+/*
+  Each .movie-poster represents one individual movie card (image + caption).
+*/
+.movie-poster {
+  display: inline-block; /* Allows posters to sit side-by-side like text, but still act like blocks (can have width, height, margins). */
+  width: 31%; /* Each poster takes roughly 1/3 of the container width (31% + margins ≈ 100%). */
+  margin: 1%; /* Adds space around each poster to prevent them from touching. */
+  vertical-align: top; /* 
+                             Inline-block elements align along the text baseline by default,
+                             which can cause them to look misaligned vertically.
+                             This aligns all posters along their TOP edges → neat, even row.
+                          */
+  border: 5px solid #fff; /* Adds a white border around each poster box. */
+  background-color: #000; /* Adds a solid black background (visible if image fails to load). */
+}
+
+/*
+  Styling for the <img> inside each poster.
+*/
+.movie-poster img {
+  width: 100%; /* Makes the image fill the full width of its parent (.movie-poster). */
+  height: 28vw; /* 
+                         Sets image height relative to viewport width.
+                         ‘vw’ = 1% of the screen’s width → 28vw = 28% of screen width.
+                         Makes image height responsive to window size.
+                      */
+  max-height: 450px; /* Prevents the image from growing taller than 450px on huge screens. */
+  object-fit: cover; /* 
+                         Keeps the image’s aspect ratio and fills its box completely.
+                         If necessary, crops edges slightly to avoid stretching.
+                         Think of it like “zoom to fill box, never distort.”
+                      */
+  display: block; /* 
+                         By default, <img> is inline (like text),
+                         which causes a small unwanted gap below it.
+                         'display: block' removes that gap for cleaner layout.
+                      */
+}
+
+/*
+  Styling for the caption (figcaption) under each image.
+*/
+.movie-poster figcaption {
+  padding: 0.75rem; /* Adds space inside the caption area (about 12px). */
+  font-size: 1rem; /* Sets font size to 1 × the default font (usually 16px). */
+  text-align: center; /* Centers caption text under each image. */
+}
+
+/*
+  MEDIA QUERY: Makes the design responsive on smaller screens (mobile).
+  It means: “Apply these rules only if the screen width is 600px or smaller.”
+*/
+@media (max-width: 600px) {
+  .movie-poster {
+    display: block; /* Stacks each poster vertically instead of side-by-side. */
+    width: 90%; /* Each poster takes 90% of the screen width. */
+    margin: 1.5rem auto; /* 
+                              Adds 1.5rem vertical space between posters,
+                              and ‘auto’ horizontally centers them (since display:block).
+                           */
+  }
+}

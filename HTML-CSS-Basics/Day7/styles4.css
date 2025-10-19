@@ -1,0 +1,20 @@
+h1,  /*thats how we can group and style multiple elements together*/
+h2 {
+  color: plum;
+}
+.box > .done {
+  /*Another way of styling.....styles the direct child of parent*/
+  color: firebrick;
+}
+.box .list {
+  /*Descendent relation exploited 😎*/
+  color: blue;
+}
+li.done {
+  /*Another way*/
+  color: seagreen;
+}
+ul p.done {
+  /*Being very very specific*/
+  font-size: 0.5rem;
+}

@@ -1,0 +1,44 @@
+body {
+  background-color: #000;
+  margin: 0; /* Removes the default white margin browsers apply around <body> */
+  height: 100vh; /* Sets the body height to 100% of the viewport height (vh = viewport height unit) */
+}
+
+.heading {
+  color: #fff;
+  font-weight: 700; /* Makes the heading bold (700 = bold weight) */
+  margin-top: 1rem; /* Adds space above the heading (1rem ≈ 16px) */
+  font-size: 1.5rem; /* Makes the text 1.5× larger than the base font size */
+}
+
+.para {
+  color: #ccc; /* Light gray color for better contrast */
+  line-height: 1.6; /* Increases spacing between lines for readability */
+  margin-top: 0.5rem; /* Adds small space between the heading and paragraph */
+}
+
+.box {
+  width: 50%; /* Box takes up half of the screen width */
+  max-width: 400px; /* Limits the maximum width so it doesn’t stretch on large screens */
+  text-align: center; /* Centers all text and inline elements inside the box */
+  position: absolute; /* Allows manual positioning using top/left coordinates */
+  top: 50%; /* Moves the box 50% down from the top of the viewport */
+  left: 50%; /* Moves the box 50% right from the left of the viewport */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Shifts the box up and left by half its own size to center it perfectly */
+}
+
+.image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* Makes the image a perfect circle */
+  object-fit: cover; /* Ensures the image fills its box without stretching; it may crop slightly to maintain aspect ratio */
+}
+
+/* 🔥 Centering Trick Summary:
+   1. position: absolute; → allows free placement using coordinates
+   2. top: 50%; left: 50%; → moves the box’s top-left corner to the screen’s center
+   3. transform: translate(-50%, -50%); → shifts the box itself so its center aligns perfectly with the screen center
+*/
