@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Grid Practice</title>
+   <link rel="stylesheet" href="grid.css">
+</head>
+
+<body>
+   <!--elements in grid dont take entire line if are in div(as they should be) but instead take the amount specified via grid-->
+   <!-- and that issue of extra space is fixed-->
+   <div style="
+      display:grid;
+      grid-template-columns: 100px 100px;
+      margin-bottom: 30px;
+      ">
+      <!--shows how wide our grid columsn are so first column is 100px and second is also 100px and we have two columns-->
+      <div style="background-color: lightblue;">
+         div 1
+      </div>
+      <div style="background-color: lightpink;">
+         div 2
+         <p>some text</p>
+         <!--grid will automatically increase the height of second columns and so would be of first as well, so they maintain allignment in a better way-->
+      </div>
+   </div>
+   <div style="
+      display:grid;
+      grid-template-columns: 100px 100px 200px;
+      margin-bottom: 30px;
+      ">
+      <!--shows how wide our grid columsn are so first column is 100px and second is also 100px and we have two columns-->
+      <div style="background-color: lightblue;">
+         div 1
+      </div>
+      <div style="background-color: lightpink;">
+         div 2
+      </div>
+      <div style="background-color: lightblue;">
+         div 3
+      </div>
+      <div style="background-color: lightpink;">
+         div 4
+         <!--so you will notice this one got below the first row as we only specified 3 coluns above so this one would got wrapped below and increase the row size by one-->
+      </div>
+   </div>
+   <div style="
+      display:grid;
+      grid-template-columns: 1fr 1fr; /* 1fr means take up the entire remaining space, so here is 50-50 for both */
+      margin-bottom: 30px;
+      ">
+      <!--shows how wide our grid columsn are so first column is 100px and second is also 100px and we have two columns-->
+      <div style="background-color: lightblue;">
+         1fr
+      </div>
+      <div style="background-color: lightpink;">
+         1fr
+      </div>
+   </div>
+   <div style="
+      display:grid;
+      grid-template-columns: 1fr 1fr 1fr; 
+      margin-bottom: 30px;
+      column-gap: 20px;
+      row-gap: 30px;
+      ">
+      <!--shows how wide our grid columsn are so first column is 100px and second is also 100px and we have two columns-->
+      <div style="background-color: lightblue; height: 200px;">
+         1fr
+      </div>
+      <div style="background-color: lightpink; height: 200px;">
+         1fr
+      </div>
+      <div style="background-color: lightblue; height: 200px;">
+         1fr
+      </div>
+      <div style="background-color: lightpink; height: 200px;">
+         1fr
+      </div>
+      <div style="background-color: lightblue; height: 200px;">
+         1fr
+      </div>
+      <div style="background-color: lightpink; height: 200px;">
+         1fr
+      </div>
+      <div style="background-color: lightblue; height: 200px;">
+         1fr
+      </div>
+      <div style="background-color: lightpink; height: 200px;">
+         1fr
+      </div>
+      <div style="background-color: lightblue; height: 200px;">
+         1fr
+      </div>
+   </div>
+</body>
+
+</html>

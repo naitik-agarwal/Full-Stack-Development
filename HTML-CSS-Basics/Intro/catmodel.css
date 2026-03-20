@@ -1,0 +1,67 @@
+.cat-model-grid{
+   display: grid;
+   grid-template-columns: 200px 200px 200px;
+   column-gap: 15px;
+}
+.cat-profile {
+  /* width: 200px;
+  height: 300px; */
+  /* display: inline-block; */
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); */
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.08),
+    0 8px 20px rgba(0, 0, 0, 0.12);
+  /* margin-right: 10px; */
+}
+.image-one {
+  width: 100%;
+  height: 100%;
+}
+.image-div {
+  height: 200px;
+}
+.text-div {
+  height: 100px;
+  margin-left: 5px;
+}
+.upper-text {
+  font-weight: bold;
+  line-height: 25px;
+  font-family: Roboto;
+}
+.mid-text {
+  height: 30px;
+  margin-bottom: 9px;
+  margin-top: 3px;
+}
+.thumbnail-image-div {
+  display: inline-block;
+  height: 100%;
+  width: 40px;
+  vertical-align: top;
+}
+.friend-count-div {
+  height: 100%;
+  display: inline-block;
+  width: 150px;
+  margin-top: 4px;
+  margin-left: -5px;
+}
+.mutual-friends {
+  margin: 0px;
+  color: rgba(55, 55, 55, 0.706);
+  font-size: 14px;
+  font-family: Roboto;
+}
+.image-2 {
+  height: 100%;
+  width: auto;
+  border-radius: 50%;
+}
+.add-friend-button {
+  color: white;
+  border: none;
+  background-color: rgb(57, 117, 234);
+  border-radius: 3px;
+  padding: 6px 12px;
+}
